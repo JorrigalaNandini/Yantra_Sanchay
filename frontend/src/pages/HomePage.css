@@ -1,0 +1,1080 @@
+/* =========================================================
+YANTRA SANCHAY - HOME PAGE - IMPROVED
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.home-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    /* Unsplash agricultural background */
+    background-image:
+        linear-gradient(90deg,
+            rgba(7, 31, 18, 0.93) 0%,
+            rgba(7, 31, 18, 0.82) 38%,
+            rgba(7, 31, 18, 0.55) 70%,
+            rgba(7, 31, 18, 0.68) 100%),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2200&q=90");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+}
+
+/* =========================================================
+   TOP HEADER - REGISTER ONLY
+========================================================= */
+
+.home-header {
+    position: absolute;
+    top: 25px;
+    right: 4%;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Register button */
+
+.register-btn {
+    width: auto;
+
+    margin: 0;
+    padding: 11px 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.22);
+
+    border-color: rgba(156, 227, 108, 0.75);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(156, 227, 108, 0.12);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+BACKGROUND OVERLAY
+========================================================= */
+
+.home-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 40%,
+            rgba(70, 160, 82, 0.16),
+            transparent 38%),
+        radial-gradient(circle at 80% 60%,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%);
+
+    pointer-events: none;
+
+}
+
+/* =========================================================
+HERO CONTAINER
+========================================================= */
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1400px, 92%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 70px 0 40px;
+
+}
+
+/* =========================================================
+LEFT SIDE
+========================================================= */
+
+.hero-left {
+    max-width: 720px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 100px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+}
+
+.badge-dot,
+.network-dot {
+    color: #78d64b;
+    font-size: 10px;
+
+    animation: pulse 1.8s infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}
+
+/* =========================================================
+HERO HEADING
+========================================================= */
+
+.hero-heading {
+    margin-top: 27px;
+}
+
+.hero-heading h1 {
+    margin: 0;
+
+    font-size: clamp(46px, 5.2vw, 78px);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+.hero-heading h1+h1 {
+    margin-top: 9px;
+}
+
+.highlight-italic {
+    color: #9ce36c;
+    font-style: italic;
+}
+
+.highlight-white {
+    color: #ffffff;
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.hero-description {
+    max-width: 610px;
+    margin: 27px 0 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.84);
+
+}
+
+/* =========================================================
+PORTAL SECTION
+========================================================= */
+
+.portal-section {
+    margin-top: 38px;
+}
+
+.portal-title {
+    margin: 0 0 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.portal-buttons {
+    display: flex;
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+/* =========================================================
+PORTAL BUTTON
+========================================================= */
+
+.portal-btn {
+    position: relative;
+
+    min-width: 245px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.11);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.portal-btn:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.19);
+
+    border-color: rgba(255, 255, 255, 0.48);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+
+}
+
+.portal-btn:active {
+    transform: translateY(-1px);
+}
+
+.farmer-btn {
+    border-left: 4px solid #91d866;
+}
+
+.officer-btn {
+    border-left: 4px solid #79b9ff;
+}
+
+.btn-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 24px;
+
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    flex: 1;
+
+}
+
+.btn-label {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.btn-desc {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+}
+
+.btn-arrow {
+    font-size: 22px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    transition: transform 0.25s ease;
+
+}
+
+.portal-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* =========================================================
+RIGHT SIDE
+========================================================= */
+
+.hero-right {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.badge-network {
+    margin-bottom: 15px;
+
+    border-color: rgba(132, 216, 97, 0.35);
+
+    background: rgba(33, 84, 43, 0.45);
+
+}
+
+/* =========================================================
+MACHINERY CARD
+========================================================= */
+
+.machinery-card-container {
+    width: min(520px, 100%);
+
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 25px;
+
+    background: rgba(15, 40, 24, 0.62);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+}
+
+/* =========================================================
+AVAILABLE SECTION
+========================================================= */
+
+.available-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+}
+
+.available-label {
+    font-size: 10px;
+    letter-spacing: 1.7px;
+
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, 0.58);
+
+}
+
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: rgba(97, 193, 78, 0.14);
+
+    color: #a6ec81;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+.machinery-title {
+    margin: 0;
+
+    font-size: 27px;
+
+    letter-spacing: -0.5px;
+
+    color: #ffffff;
+
+}
+
+/* =========================================================
+MACHINERY CARDS
+========================================================= */
+
+.machinery-cards {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.machinery-card {
+    display: flex;
+
+    overflow: hidden;
+
+    min-height: 145px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+.machinery-card:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.14);
+
+}
+
+/* =========================================================
+MACHINERY IMAGE
+========================================================= */
+
+.machinery-image {
+    width: 46%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(120, 191, 81, 0.28),
+            rgba(255, 255, 255, 0.03));
+
+}
+
+.tractor-icon {
+    font-size: 75px;
+
+    filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.3));
+
+    transform: scaleX(-1);
+
+}
+
+/* =========================================================
+CARD DETAILS
+========================================================= */
+
+.card-details {
+    flex: 1;
+
+    padding: 23px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.machinery-name {
+    margin: 0;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+}
+
+.machinery-specs {
+    margin: 7px 0 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.55);
+
+}
+
+.availability-badge {
+    align-self: flex-start;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(104, 201, 76, 0.15);
+
+    color: #a9ef88;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+.availability-badge span {
+    margin-right: 4px;
+}
+
+/* =========================================================
+MINI MACHINERY CARD
+========================================================= */
+
+.machinery-mini-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 15px;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    background: rgba(255, 255, 255, 0.055);
+
+}
+
+.mini-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 20px;
+
+}
+
+.machinery-mini-card div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+.machinery-mini-card strong {
+    font-size: 12px;
+}
+
+.machinery-mini-card span {
+    font-size: 10px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* =========================================================
+COUNTER
+========================================================= */
+
+.cards-counter {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 23px;
+
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+}
+
+.counter-item strong {
+    font-size: 15px;
+
+    color: #ffffff;
+
+}
+
+.counter-item small {
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+}
+
+.counter-line {
+    width: 30px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.home-footer {
+    position: absolute;
+
+    bottom: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.48);
+
+}
+
+.home-footer span {
+    margin-right: 6px;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 60px 0 80px;
+    }
+
+    .hero-left {
+        max-width: 750px;
+        margin: auto;
+
+        text-align: center;
+    }
+
+    .portal-buttons {
+        justify-content: center;
+    }
+
+    .hero-right {
+        align-items: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-heading h1 {
+        font-size: clamp(42px, 8vw, 65px);
+    }
+
+    .home-footer {
+        position: relative;
+
+        bottom: auto;
+
+        margin: 0 0 20px;
+
+        transform: none;
+        left: auto;
+    }
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .home-page {
+        height: 100vh;
+
+        background-position: 62% center;
+    }
+
+    .hero-container {
+        width: 90%;
+
+        padding: 38px 0 30px;
+
+        gap: 35px;
+    }
+
+    .badge {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+        padding: 8px 11px;
+    }
+
+    .hero-heading {
+        margin-top: 20px;
+    }
+
+    .hero-heading h1 {
+        font-size: 39px;
+
+        line-height: 1.02;
+
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-top: 20px;
+    }
+
+    .portal-section {
+        margin-top: 27px;
+    }
+
+    .portal-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .portal-btn {
+        width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .badge-network {
+        align-self: center;
+    }
+
+    .machinery-card-container {
+        padding: 17px;
+
+        border-radius: 19px;
+    }
+
+    .machinery-title {
+        font-size: 22px;
+    }
+
+    .machinery-image {
+        width: 40%;
+    }
+
+    .tractor-icon {
+        font-size: 50px;
+    }
+
+    .card-details {
+        padding: 15px;
+    }
+
+    .machinery-name {
+        font-size: 15px;
+    }
+
+    .machinery-specs {
+        font-size: 8px;
+    }
+
+    .home-footer {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+        padding: 0 15px;
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =========================================================
+VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-heading h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .portal-btn {
+        padding: 13px;
+    }
+
+    .btn-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+    }
+
+    .btn-label {
+        font-size: 13px;
+    }
+
+    .btn-desc {
+        font-size: 9px;
+    }
+
+}
+
+/* =========================================================
+   ENHANCED UI - PREMIUM STYLE UPGRADE
+========================================================= */
+
+.hero-heading h1 {
+    font-size: clamp(58px, 6vw, 96px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+    text-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-italic {
+    color: #b4ef83;
+    text-shadow: 0 0 20px rgba(180, 239, 131, 0.3);
+}
+
+.portal-btn {
+    min-width: 280px;
+    padding: 18px 24px;
+    border-radius: 18px;
+    background: rgba(7, 28, 16, 0.65);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.portal-btn:hover {
+    transform: translateY(-8px);
+    background: rgba(14, 46, 26, 0.85);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(156, 227, 108, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.machinery-card-container {
+    border-radius: 28px;
+    background: rgba(5, 25, 13, 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.machinery-image {
+    background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 60%),
+        linear-gradient(145deg,
+            rgba(120, 191, 81, 0.25),
+            rgba(255, 255, 255, 0.03));
+}
+
+.tractor-icon {
+    font-size: 85px;
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.45));
+}
+
+.hero-right::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: 60px;
+    top: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(120, 191, 81, 0.18),
+        transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+@keyframes floatingCard {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.machinery-card-container {
+    animation: floatingCard 5s ease-in-out infinite;
+}

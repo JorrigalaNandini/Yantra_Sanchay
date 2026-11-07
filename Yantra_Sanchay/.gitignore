@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Production build
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Cache
+.cache/
+.eslintcache
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+.cache
+.parcel-cache
+
+# Temporary files
+*.tmp
+*.temp
+
+# MongoDB
+.mongo
+
+# Service worker cache
+sw.js.map

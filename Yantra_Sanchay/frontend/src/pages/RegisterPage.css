@@ -1,0 +1,307 @@
+/* =========================================================
+   YANTRA SANCHAY - REGISTER PAGE (Modern Dark Theme)
+========================================================= */
+
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #0f1419 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-page::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.15) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBg 20s ease-in-out infinite;
+}
+
+.register-page::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.1) 0%, transparent 70%);
+    bottom: -150px;
+    right: -150px;
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBg2 25s ease-in-out infinite reverse;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    z-index: 1;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #2196F3, transparent);
+}
+
+.register-box h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 5px;
+    color: #4CAF50;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.register-box h2 {
+    text-align: center;
+    color: #b8c5d0;
+    margin: 0 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.role-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.role-selector label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #b8c5d0;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.role-selector label:hover {
+    color: #4CAF50;
+}
+
+.role-selector input[type="radio"] {
+    cursor: pointer;
+    accent-color: #4CAF50;
+}
+
+.role-selector input[type="radio"]:checked+label,
+.role-selector input[type="radio"]:checked~label {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #b8c5d0;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #8aa0ab;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.08);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+.location-section {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.location-header h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #4CAF50;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-detect-location {
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-detect-location:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-detect-location:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.location-status {
+    background: rgba(76, 175, 80, 0.15);
+    border-left: 3px solid #4CAF50;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.location-status p {
+    margin: 0;
+    color: #7bc97f;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.location-coordinates {
+    background: rgba(33, 150, 243, 0.1);
+    border-left: 3px solid #2196f3;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.location-coordinates small {
+    color: #81d4fa;
+    font-size: 12px;
+    display: block;
+    line-height: 1.5;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.register-btn {
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    color: white;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+}
+
+.register-footer {
+    text-align: center;
+    color: #8aa0ab;
+    font-size: 13px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.register-footer a:hover {
+    color: #66bb6a;
+}
+
+@media (max-width: 768px) {
+    .register-box {
+        padding: 40px 25px;
+    }
+
+    .register-box h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: 30px 20px;
+    }
+}

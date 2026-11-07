@@ -1,0 +1,258 @@
+my-requests-page {
+    min-height: 100vh;
+    padding: 40px 5%;
+    background: linear-gradient(135deg, #0f2416, #163824, #214b31);
+    color: #fff;
+}
+
+.requests-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header-content h1 {
+    margin: 10px 0;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.header-content p {
+    color: #d6e6d8;
+}
+
+.page-badge {
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .15);
+    backdrop-filter: blur(12px);
+}
+
+.refresh-btn {
+    border: none;
+    padding: 14px 24px;
+    border-radius: 14px;
+    background: #8fd16d;
+    color: #103019;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.request-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter: blur(18px);
+    border-radius: 24px;
+    padding: 22px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.summary-icon {
+    font-size: 34px;
+}
+
+.summary-card strong {
+    display: block;
+    font-size: 28px;
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.request-card {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 25px;
+
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 28px;
+
+    padding: 24px;
+
+    transition: .3s ease;
+}
+
+.request-card:hover {
+    transform: translateY(-6px);
+}
+
+.request-image {
+    position: relative;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.request-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default-machinery-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    background: linear-gradient(135deg, #8fd16d, #3e8d4f);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    background: #fff;
+    color: #111;
+}
+
+.status-badge.approved {
+    background: #9cf085;
+}
+
+.status-badge.pending {
+    background: #ffe083;
+}
+
+.status-badge.rejected {
+    background: #ff9a9a;
+}
+
+.request-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.machinery-category {
+    color: #9fe17d;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.request-top h3 {
+    margin-top: 8px;
+    font-size: 28px;
+}
+
+.request-id {
+    color: #cfdacf;
+}
+
+.request-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 16px;
+    padding: 14px;
+
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.detail-icon {
+    font-size: 24px;
+}
+
+.detail-item small {
+    display: block;
+    color: #cfdacf;
+    margin-bottom: 5px;
+}
+
+.detail-item strong {
+    color: #fff;
+}
+
+.request-notes {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .06);
+}
+
+.request-footer {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-request-btn {
+    border: none;
+
+    background: #8fd16d;
+    color: #103019;
+
+    font-weight: 700;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.requests-state {
+    text-align: center;
+    padding: 60px;
+}
+
+.state-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+@media(max-width:900px) {
+
+    .request-card {
+        grid-template-columns: 1fr;
+    }
+
+    .request-image {
+        height: 260px;
+    }
+
+    .request-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
